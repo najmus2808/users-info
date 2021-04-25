@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import User from './components/User/User';
 
 const App = () => {
-  const [users, setUSers] = useState([]);
+  const [users, setUsers] = useState([]);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
-      .then(data => setUSers(data));
+      .then(data => setUsers(data));
   }, [])
   return (
     <div>
